@@ -1,128 +1,18 @@
+import { Footer } from "@/components/Footer";
+import { Sidebar } from "@/components/Sidebar";
 import {
-  Home as HomeIcon,
-  Search,
-  Library,
-  Plus,
-  ArrowRight,
-  ArrowRightCircleIcon,
-  ArrowDown,
-  ArrowDown01,
-  ArrowDownFromLine,
   ChevronLeft,
   ChevronRight,
+  Play,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
-        <aside className="w-82 bg-zinc-950 p-6">
-          <div className="flex items-center gap-2">
-            <div className="w-1 h-1 bg-white rounded-full" />
-            <div className="w-1 h-1 bg-white rounded-full" />
-            <div className="w-1 h-1 bg-white rounded-full" />
-          </div>
+        <Sidebar />
 
-          <nav className="space-y-5 mt-10 bg-zinc-900 rounded-lg p-5">
-            <a
-              href=""
-              className="flex items-center gap-3 text-sm font-semibol text-zinc-200"
-            >
-              <HomeIcon />
-              Home
-            </a>
-            <a
-              href=""
-              className="flex items-center gap-3 text-sm font-semibold text-zinc-200"
-            >
-              <Search />
-              Search
-            </a>
-          </nav>
-
-          <nav className="mt-2 bg-zinc-900 rounded-lg p-5">
-            <a
-              href=""
-              className="flex items-center gap-3 text-sm font-semibold text-zinc-200"
-            >
-              <Library />
-              Your Library
-              <div className="flex items-end gap-3">
-                <Plus />
-                <ArrowRight />
-              </div>
-            </a>
-            <div className="flex mt-2 gap-1">
-              <a className="font-normal px-1 text-sm text-zinc-50 bg-zinc-950 rounded-xl">
-                Playlists
-              </a>
-              <a className="font-normal px-1 text-sm text-zinc-50 bg-zinc-950 rounded-xl">
-                Podcasts & Shows
-              </a>
-              <a className="font-normal px-1 text-sm text-zinc-50 bg-zinc-950 rounded-xl">
-                Albums
-              </a>
-              <a className="font-normal px-1 text-sm text-zinc-50 bg-zinc-950 rounded-xl">
-                Artists
-              </a>{" "}
-            </div>
-
-            <div className=" mt-2 flex">
-              <Search />
-              <div className="flex">
-                <text className="text-sm text-zinc-300 font-semibold">
-                  Recent
-                </text>
-                <ArrowDown />
-              </div>
-            </div>
-
-            <div className="mt-2 flex flex-col gap-2">
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                Liked Songs
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                DJ marcelinha
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                best taylor swift bridges to scream (or cry) to at 3 am
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                Spider-Verse: The Official Playlist
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                introvertido sofrendo
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                HARD GYM by DJ
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                Desenhos
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                Speak Now (TS)
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                Time to be sad
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                Suave
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                Alheio
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                PIRATA
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                reputation
-              </a>
-              <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-                Owl City
-              </a>
-            </div>
-          </nav>
-        </aside>
         <main className="flex-1 p-6">
           <div className="flex items-center gap-4">
             <button className="p-1 rounded-full bg-black/40">
@@ -132,21 +22,189 @@ export default function Home() {
               <ChevronRight />
             </button>
           </div>
+
           <h1 className="font-semibold text-3xl mt-10">Good Morning</h1>
 
-          <div className="grid grid-cols-3 gap-4 overflow-hidden">
-            <div className="bg-white/10 rounded-full">Playlist</div>
-            <div className="bg-white/10 rounded-full">Playlist</div>
-            <div className="bg-white/10 rounded-full">Playlist</div>
-            <div className="bg-white/10 rounded-full">Playlist</div>
-            <div className="bg-white/10 rounded-full">Playlist</div>
-            <div className="bg-white/10 rounded-full">Playlist</div>
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            <a
+              href="#"
+              className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/1989TV.png"
+                width={104}
+                height={104}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong>1989 (TV)</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/1989TV.png"
+                width={104}
+                height={104}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong>1989 (TV)</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/1989TV.png"
+                width={104}
+                height={104}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong>1989 (TV)</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/1989TV.png"
+                width={104}
+                height={104}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong>1989 (TV)</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/1989TV.png"
+                width={104}
+                height={104}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong>1989 (TV)</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 group rounded overflow-hidden flex items-center gap-4 hover:bg-white/10 transition-colors"
+            >
+              <Image
+                src="/1989TV.png"
+                width={104}
+                height={104}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong>1989 (TV)</strong>
+              <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+          </div>
+
+          <h2 className="font-semibold text-2xl mt-10">Made for Ronnylrsd</h2>
+
+          <div className="grid grid-cols-9 gap-4 mt-4">
+            <a
+              href="#"
+              className="bg-white/5 p-3 rounded-md flex flex-col gap-2 hover:bg-white/10"
+            >
+              <Image
+                src="/1989TV.png"
+                className="w-full"
+                width={120}
+                height={120}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-400">
+                Taylor Swift, Novo Amor, Nirvana and more
+              </span>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 p-3 rounded-md flex flex-col gap-2 hover:bg-white/10"
+            >
+              <Image
+                src="/1989TV.png"
+                className="w-full"
+                width={120}
+                height={120}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-400">
+                Taylor Swift, Novo Amor, Nirvana and more
+              </span>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 p-3 rounded-md flex flex-col gap-2 hover:bg-white/10"
+            >
+              <Image
+                src="/1989TV.png"
+                className="w-full"
+                width={120}
+                height={120}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-400">
+                Taylor Swift, Novo Amor, Nirvana and more
+              </span>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 p-3 rounded-md flex flex-col gap-2 hover:bg-white/10"
+            >
+              <Image
+                src="/1989TV.png"
+                className="w-full"
+                width={120}
+                height={120}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-400">
+                Taylor Swift, Novo Amor, Nirvana and more
+              </span>
+            </a>
+            <a
+              href="#"
+              className="bg-white/5 p-3 rounded-md flex flex-col gap-2 hover:bg-white/10"
+            >
+              <Image
+                src="/1989TV.png"
+                className="w-full"
+                width={120}
+                height={120}
+                alt="capa da playlist 1989 (TV)"
+              />
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-400">
+                Taylor Swift, Novo Amor, Nirvana and more
+              </span>
+            </a>
           </div>
         </main>
       </div>
-      <footer className="bg-zinc-800 border-t border-zinc-700 p-6">
-        footer
-      </footer>
+      <Footer />
     </div>
   );
 }

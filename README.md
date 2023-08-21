@@ -12,6 +12,8 @@
 
 <br>
 
+<img src="/public/finishproject.png" alt="Imagem do projeto finalizado" />
+
 ## 💻 Projeto
 
 Projeto criado para treinar minhas habilidades replicando a tela inicial do spotify.
